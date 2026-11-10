@@ -18,7 +18,9 @@ const outJson = path.join(ROOT, 'public', 'captions.json');
 const whisperDir = path.join(ROOT, '.whisper');
 const model = process.env.WHISPER_MODEL || 'medium.en';
 
-let footage = process.argv[2];
+// Only honor an explicit path argument if it's a real file; otherwise auto-detect.
+// (Guards against stray shell args, e.g. an un-stripped "# comment" in zsh.)
+let footage = process.argv[2] && existsSync(process.argv[2]) ? process.argv[2] : null;
 if (!footage) {
   const name = findFootage(path.join(ROOT, 'public'));
   if (name) footage = path.join(ROOT, 'public', name);

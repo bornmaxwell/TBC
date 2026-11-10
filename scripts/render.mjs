@@ -15,7 +15,8 @@ import path from 'node:path';
 import {findFootage} from './find-footage.mjs';
 
 const ROOT = process.cwd();
-const comp = process.argv[2] || 'FoundProfitsOverlay';
+// Accept only known composition ids; ignore stray args (e.g. an un-stripped zsh "# comment").
+const comp = process.argv[2] === 'Sample' ? 'Sample' : 'FoundProfitsOverlay';
 const isSample = comp === 'Sample';
 
 // scale: 1 => 1080x1920, 2 => 2160x3840 (4K vertical). Default 4K for real footage.
