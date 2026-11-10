@@ -6,6 +6,7 @@
     "studio": "remotion studio",
     "transcribe": "node scripts/transcribe.mjs",
     "render": "node scripts/render.mjs FoundProfitsOverlay",
+    "render:1080": "SCALE=1 node scripts/render.mjs FoundProfitsOverlay",
     "render:sample": "node scripts/render.mjs Sample"
   },
   "repository": {

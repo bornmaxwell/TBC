@@ -17,29 +17,44 @@ Playfair Display headings + DM Sans labels/captions.
   and a `$7` end card.
 - **Whisper** captions synced word-by-word (the spoken word pops in gold).
 
-## Quick start
+## Setup (macOS)
 
 ```bash
-npm install
+# Prerequisites (once):
+xcode-select --install                 # C compiler, for Whisper
+brew install node ffmpeg               # Node 20+, ffmpeg/ffprobe
 
-# 1. Put your recorded clip here (vertical 9:16 works best):
+git clone https://github.com/bornmaxwell/TBC.git
+cd TBC && git checkout claude/motion-graphics-video-f2h4cs
+npm install
+```
+
+## Make a video
+
+```bash
+# 1. Put your recorded clip here (vertical 9:16, 4K is fine):
 #      public/footage.mp4
 
-# 2. Generate word-level captions from its audio (first run downloads Whisper):
+# 2. Word-level captions from its audio (first run downloads Whisper + model):
 npm run transcribe            # -> public/captions.json
 #    options: WHISPER_MODEL=small.en npm run transcribe   (tiny.en…large-v3)
 
-# 3. Preview / fine-tune in the Remotion Studio (retime overlays live):
+# 3. Preview / retime the overlays live:
 npm run studio
 
-# 4. Render the final video (duration auto-matches your clip):
-npm run render               # -> out/found-profits-video.mp4
+# 4. Render:
+npm run render                # 4K 2160x3840 -> out/found-profits-video-2160x3840.mp4
+npm run render:1080           # 1080x1920 proof (faster)
 ```
+
+The composition is authored at 1080×1920 and rendered at 2× for 4K, so a 4K
+source clip keeps full detail and the graphics/captions stay crisp. Override with
+`SCALE=2 CRF=16 npm run render`.
 
 ### Try it without footage
 
 ```bash
-npm run render:sample        # -> out/sample.mp4  (uses the bundled sample clip)
+npm run render:sample        # -> out/sample-1080x1920.mp4  (bundled sample clip)
 ```
 
 ## Retiming the graphics
