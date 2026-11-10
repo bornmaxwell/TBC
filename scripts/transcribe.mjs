@@ -36,8 +36,9 @@ const wav = path.join(ROOT, '.tmp-audio.wav');
 console.log('1/4  Extracting 16kHz mono audio…');
 execFileSync('ffmpeg', ['-y', '-i', footage, '-ar', '16000', '-ac', '1', '-c:a', 'pcm_s16le', wav], {stdio: 'inherit'});
 
+const WHISPER_VERSION = '1.5.5';
 console.log('2/4  Ensuring whisper.cpp…');
-await installWhisperCpp({to: whisperDir, version: '1.5.5'});
+await installWhisperCpp({to: whisperDir, version: WHISPER_VERSION});
 
 console.log(`3/4  Ensuring model "${model}"…`);
 await downloadWhisperModel({folder: whisperDir, model});
@@ -46,6 +47,7 @@ console.log('4/4  Transcribing (word-level)…');
 const {transcription} = await transcribe({
   inputPath: wav,
   whisperPath: whisperDir,
+  whisperCppVersion: WHISPER_VERSION,
   model,
   tokenLevelTimestamps: true,
 });
