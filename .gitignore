@@ -1,0 +1,10 @@
+node_modules/
+out/
+.whisper/
+.tmp-audio.wav
+# Your real footage + generated captions stay local
+public/footage.mp4
+public/captions.json
+# Remotion
+.remotion/
+*.log

@@ -1,0 +1,415 @@
+[
+  {
+    "text": "You're ",
+    "startMs": 600,
+    "endMs": 890,
+    "timestampMs": 745,
+    "confidence": 1
+  },
+  {
+    "text": "spending ",
+    "startMs": 890,
+    "endMs": 1180,
+    "timestampMs": 1035,
+    "confidence": 1
+  },
+  {
+    "text": "money ",
+    "startMs": 1180,
+    "endMs": 1470,
+    "timestampMs": 1325,
+    "confidence": 1
+  },
+  {
+    "text": "on ",
+    "startMs": 1470,
+    "endMs": 1760,
+    "timestampMs": 1615,
+    "confidence": 1
+  },
+  {
+    "text": "ads ",
+    "startMs": 1760,
+    "endMs": 2050,
+    "timestampMs": 1905,
+    "confidence": 1
+  },
+  {
+    "text": "and ",
+    "startMs": 3000,
+    "endMs": 3290,
+    "timestampMs": 3145,
+    "confidence": 1
+  },
+  {
+    "text": "still ",
+    "startMs": 3290,
+    "endMs": 3580,
+    "timestampMs": 3435,
+    "confidence": 1
+  },
+  {
+    "text": "lose ",
+    "startMs": 3580,
+    "endMs": 3870,
+    "timestampMs": 3725,
+    "confidence": 1
+  },
+  {
+    "text": "the ",
+    "startMs": 3870,
+    "endMs": 4160,
+    "timestampMs": 4015,
+    "confidence": 1
+  },
+  {
+    "text": "job ",
+    "startMs": 4160,
+    "endMs": 4450,
+    "timestampMs": 4305,
+    "confidence": 1
+  },
+  {
+    "text": "to ",
+    "startMs": 4450,
+    "endMs": 4740,
+    "timestampMs": 4595,
+    "confidence": 1
+  },
+  {
+    "text": "whoever ",
+    "startMs": 4740,
+    "endMs": 5030,
+    "timestampMs": 4885,
+    "confidence": 1
+  },
+  {
+    "text": "texts ",
+    "startMs": 5030,
+    "endMs": 5320,
+    "timestampMs": 5175,
+    "confidence": 1
+  },
+  {
+    "text": "back ",
+    "startMs": 5320,
+    "endMs": 5610,
+    "timestampMs": 5465,
+    "confidence": 1
+  },
+  {
+    "text": "first ",
+    "startMs": 5610,
+    "endMs": 5900,
+    "timestampMs": 5755,
+    "confidence": 1
+  },
+  {
+    "text": "The ",
+    "startMs": 5200,
+    "endMs": 5490,
+    "timestampMs": 5345,
+    "confidence": 1
+  },
+  {
+    "text": "first ",
+    "startMs": 5490,
+    "endMs": 5780,
+    "timestampMs": 5635,
+    "confidence": 1
+  },
+  {
+    "text": "useful ",
+    "startMs": 5780,
+    "endMs": 6070,
+    "timestampMs": 5925,
+    "confidence": 1
+  },
+  {
+    "text": "reply ",
+    "startMs": 6070,
+    "endMs": 6360,
+    "timestampMs": 6215,
+    "confidence": 1
+  },
+  {
+    "text": "wins ",
+    "startMs": 6360,
+    "endMs": 6650,
+    "timestampMs": 6505,
+    "confidence": 1
+  },
+  {
+    "text": "Reply ",
+    "startMs": 6900,
+    "endMs": 7190,
+    "timestampMs": 7045,
+    "confidence": 1
+  },
+  {
+    "text": "inside ",
+    "startMs": 7190,
+    "endMs": 7480,
+    "timestampMs": 7335,
+    "confidence": 1
+  },
+  {
+    "text": "five ",
+    "startMs": 7480,
+    "endMs": 7770,
+    "timestampMs": 7625,
+    "confidence": 1
+  },
+  {
+    "text": "minutes ",
+    "startMs": 7770,
+    "endMs": 8060,
+    "timestampMs": 7915,
+    "confidence": 1
+  },
+  {
+    "text": "Speed ",
+    "startMs": 9000,
+    "endMs": 9290,
+    "timestampMs": 9145,
+    "confidence": 1
+  },
+  {
+    "text": "to ",
+    "startMs": 9290,
+    "endMs": 9580,
+    "timestampMs": 9435,
+    "confidence": 1
+  },
+  {
+    "text": "lead ",
+    "startMs": 9580,
+    "endMs": 9870,
+    "timestampMs": 9725,
+    "confidence": 1
+  },
+  {
+    "text": "beats ",
+    "startMs": 9870,
+    "endMs": 10160,
+    "timestampMs": 10015,
+    "confidence": 1
+  },
+  {
+    "text": "everyone ",
+    "startMs": 10160,
+    "endMs": 10450,
+    "timestampMs": 10305,
+    "confidence": 1
+  },
+  {
+    "text": "One ",
+    "startMs": 12100,
+    "endMs": 12390,
+    "timestampMs": 12245,
+    "confidence": 1
+  },
+  {
+    "text": "prompt. ",
+    "startMs": 12390,
+    "endMs": 12680,
+    "timestampMs": 12535,
+    "confidence": 1
+  },
+  {
+    "text": "Three ",
+    "startMs": 12680,
+    "endMs": 12970,
+    "timestampMs": 12825,
+    "confidence": 1
+  },
+  {
+    "text": "replies ",
+    "startMs": 12970,
+    "endMs": 13260,
+    "timestampMs": 13115,
+    "confidence": 1
+  },
+  {
+    "text": "A ",
+    "startMs": 14200,
+    "endMs": 14490,
+    "timestampMs": 14345,
+    "confidence": 1
+  },
+  {
+    "text": "text, ",
+    "startMs": 14490,
+    "endMs": 14780,
+    "timestampMs": 14635,
+    "confidence": 1
+  },
+  {
+    "text": "an ",
+    "startMs": 14780,
+    "endMs": 15070,
+    "timestampMs": 14925,
+    "confidence": 1
+  },
+  {
+    "text": "email, ",
+    "startMs": 15070,
+    "endMs": 15360,
+    "timestampMs": 15215,
+    "confidence": 1
+  },
+  {
+    "text": "a ",
+    "startMs": 15360,
+    "endMs": 15650,
+    "timestampMs": 15505,
+    "confidence": 1
+  },
+  {
+    "text": "voicemail ",
+    "startMs": 15650,
+    "endMs": 15940,
+    "timestampMs": 15795,
+    "confidence": 1
+  },
+  {
+    "text": "two ",
+    "startMs": 16600,
+    "endMs": 16890,
+    "timestampMs": 16745,
+    "confidence": 1
+  },
+  {
+    "text": "time ",
+    "startMs": 16890,
+    "endMs": 17180,
+    "timestampMs": 17035,
+    "confidence": 1
+  },
+  {
+    "text": "windows ",
+    "startMs": 17180,
+    "endMs": 17470,
+    "timestampMs": 17325,
+    "confidence": 1
+  },
+  {
+    "text": "each ",
+    "startMs": 17470,
+    "endMs": 17760,
+    "timestampMs": 17615,
+    "confidence": 1
+  },
+  {
+    "text": "Read ",
+    "startMs": 18700,
+    "endMs": 18990,
+    "timestampMs": 18845,
+    "confidence": 1
+  },
+  {
+    "text": "it ",
+    "startMs": 18990,
+    "endMs": 19280,
+    "timestampMs": 19135,
+    "confidence": 1
+  },
+  {
+    "text": "before ",
+    "startMs": 19280,
+    "endMs": 19570,
+    "timestampMs": 19425,
+    "confidence": 1
+  },
+  {
+    "text": "you ",
+    "startMs": 19570,
+    "endMs": 19860,
+    "timestampMs": 19715,
+    "confidence": 1
+  },
+  {
+    "text": "send ",
+    "startMs": 19860,
+    "endMs": 20150,
+    "timestampMs": 20005,
+    "confidence": 1
+  },
+  {
+    "text": "it ",
+    "startMs": 20150,
+    "endMs": 20440,
+    "timestampMs": 20295,
+    "confidence": 1
+  },
+  {
+    "text": "Profit ",
+    "startMs": 21300,
+    "endMs": 21590,
+    "timestampMs": 21445,
+    "confidence": 1
+  },
+  {
+    "text": "Leak ",
+    "startMs": 21590,
+    "endMs": 21880,
+    "timestampMs": 21735,
+    "confidence": 1
+  },
+  {
+    "text": "Prompts. ",
+    "startMs": 21880,
+    "endMs": 22170,
+    "timestampMs": 22025,
+    "confidence": 1
+  },
+  {
+    "text": "Seven ",
+    "startMs": 22170,
+    "endMs": 22460,
+    "timestampMs": 22315,
+    "confidence": 1
+  },
+  {
+    "text": "dollars ",
+    "startMs": 22460,
+    "endMs": 22750,
+    "timestampMs": 22605,
+    "confidence": 1
+  },
+  {
+    "text": "on ",
+    "startMs": 22750,
+    "endMs": 23040,
+    "timestampMs": 22895,
+    "confidence": 1
+  },
+  {
+    "text": "Etsy ",
+    "startMs": 23040,
+    "endMs": 23330,
+    "timestampMs": 23185,
+    "confidence": 1
+  },
+  {
+    "text": "Link ",
+    "startMs": 24300,
+    "endMs": 24590,
+    "timestampMs": 24445,
+    "confidence": 1
+  },
+  {
+    "text": "in ",
+    "startMs": 24590,
+    "endMs": 24880,
+    "timestampMs": 24735,
+    "confidence": 1
+  },
+  {
+    "text": "bio ",
+    "startMs": 24880,
+    "endMs": 25170,
+    "timestampMs": 25025,
+    "confidence": 1
+  }
+]

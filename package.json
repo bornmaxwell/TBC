@@ -1,0 +1,38 @@
+{
+  "name": "tbc",
+  "version": "1.0.0",
+  "description": "This is my readme file",
+  "scripts": {
+    "studio": "remotion studio",
+    "transcribe": "node scripts/transcribe.mjs",
+    "render": "node scripts/render.mjs FoundProfitsOverlay",
+    "render:sample": "node scripts/render.mjs Sample"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bornmaxwell/TBC.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bornmaxwell/TBC/issues"
+  },
+  "homepage": "https://github.com/bornmaxwell/TBC#readme",
+  "dependencies": {
+    "@remotion/captions": "^4.0.542",
+    "@remotion/cli": "^4.0.542",
+    "@remotion/google-fonts": "^4.0.542",
+    "@remotion/install-whisper-cpp": "^4.0.542",
+    "@remotion/media-utils": "^4.0.542",
+    "@remotion/zod-types": "^4.0.542",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "remotion": "^4.0.542"
+  },
+  "devDependencies": {
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "typescript": "^7.0.2"
+  }
+}
