@@ -3,7 +3,7 @@ out/
 .whisper/
 .tmp-audio.wav
 # Your real footage + generated captions stay local
-public/footage.mp4
+public/footage.*
 public/captions.json
 # Remotion
 .remotion/

@@ -13,13 +13,22 @@ import {existsSync, writeFileSync, rmSync} from 'node:fs';
 import path from 'node:path';
 
 const ROOT = process.cwd();
-const footage = process.argv[2] || path.join(ROOT, 'public', 'footage.mp4');
 const outJson = path.join(ROOT, 'public', 'captions.json');
 const whisperDir = path.join(ROOT, '.whisper');
 const model = process.env.WHISPER_MODEL || 'medium.en';
 
-if (!existsSync(footage)) {
-  console.error(`No footage found at ${footage}. Put your clip at public/footage.mp4 first.`);
+let footage = process.argv[2];
+if (!footage) {
+  for (const c of ['footage.mp4', 'footage.mov', 'footage.m4v', 'footage.webm', 'footage.MOV', 'footage.MP4']) {
+    if (existsSync(path.join(ROOT, 'public', c))) {
+      footage = path.join(ROOT, 'public', c);
+      break;
+    }
+  }
+}
+
+if (!footage || !existsSync(footage)) {
+  console.error('No footage found in public/ (footage.mp4 / footage.mov / …). Put your clip there first.');
   process.exit(1);
 }
 

@@ -22,7 +22,8 @@ export const RemotionRoot: React.FC = () => {
         durationInFrames={Math.round(26 * VIDEO.fps)}
         calculateMetadata={calc}
         defaultProps={{
-          footageSrc: 'footage.mp4',
+          // Studio preview default; `npm run render` auto-detects the real file.
+          footageSrc: 'footage.mov',
           captionsSrc: 'captions.json',
           cues: DEFAULT_CUES,
           durationInFrames: 0,

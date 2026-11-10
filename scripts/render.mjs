@@ -21,14 +21,24 @@ const isSample = comp === 'Sample';
 const scale = Number(process.env.SCALE || (isSample ? 1 : 2));
 const crf = Number(process.env.CRF || 17);
 
-const footage = path.join(ROOT, 'public', isSample ? 'sample-footage.mp4' : 'footage.mp4');
+// Auto-detect the footage file (mp4 / mov / m4v / webm) so the filename extension
+// doesn't matter — just name it footage.<ext> in public/.
+const candidates = isSample ? ['sample-footage.mp4'] : ['footage.mp4', 'footage.mov', 'footage.m4v', 'footage.webm', 'footage.MOV', 'footage.MP4'];
+let footageName = null;
+for (const c of candidates) {
+  if (existsSync(path.join(ROOT, 'public', c))) {
+    footageName = c;
+    break;
+  }
+}
+const footage = footageName ? path.join(ROOT, 'public', footageName) : null;
 const outDir = path.join(ROOT, 'out');
 mkdirSync(outDir, {recursive: true});
 const resTag = `${1080 * scale}x${1920 * scale}`;
 const out = path.join(outDir, isSample ? `sample-${resTag}.mp4` : `found-profits-video-${resTag}.mp4`);
 
 let durationInFrames = 0;
-if (existsSync(footage)) {
+if (footage && existsSync(footage)) {
   try {
     const dur = execFileSync('ffprobe', ['-v', 'error', '-show_entries', 'format=duration', '-of', 'default=nw=1:nk=1', footage])
       .toString()
@@ -39,10 +49,10 @@ if (existsSync(footage)) {
     console.warn('ffprobe unavailable — falling back to default duration.');
   }
 } else if (!isSample) {
-  console.warn(`No footage at ${footage} — add your clip there first (rendering placeholder).`);
+  console.warn('No footage found in public/ (footage.mp4 / footage.mov / …) — rendering placeholder.');
 }
 
-const props = JSON.stringify({durationInFrames});
+const props = JSON.stringify({durationInFrames, ...(footageName ? {footageSrc: footageName} : {})});
 const args = ['remotion', 'render', comp, out, `--props=${props}`, `--crf=${crf}`];
 if (scale !== 1) args.push(`--scale=${scale}`);
 
