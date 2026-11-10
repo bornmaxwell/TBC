@@ -11,6 +11,7 @@ import {installWhisperCpp, downloadWhisperModel, transcribe, toCaptions} from '@
 import {execFileSync} from 'node:child_process';
 import {existsSync, writeFileSync, rmSync} from 'node:fs';
 import path from 'node:path';
+import {findFootage} from './find-footage.mjs';
 
 const ROOT = process.cwd();
 const outJson = path.join(ROOT, 'public', 'captions.json');
@@ -19,18 +20,15 @@ const model = process.env.WHISPER_MODEL || 'medium.en';
 
 let footage = process.argv[2];
 if (!footage) {
-  for (const c of ['footage.mp4', 'footage.mov', 'footage.m4v', 'footage.webm', 'footage.MOV', 'footage.MP4']) {
-    if (existsSync(path.join(ROOT, 'public', c))) {
-      footage = path.join(ROOT, 'public', c);
-      break;
-    }
-  }
+  const name = findFootage(path.join(ROOT, 'public'));
+  if (name) footage = path.join(ROOT, 'public', name);
 }
 
 if (!footage || !existsSync(footage)) {
-  console.error('No footage found in public/ (footage.mp4 / footage.mov / …). Put your clip there first.');
+  console.error('No footage found in public/ (drop your clip there — any .mov/.mp4 works).');
   process.exit(1);
 }
+console.log('Transcribing footage:', path.basename(footage));
 
 const wav = path.join(ROOT, '.tmp-audio.wav');
 console.log('1/4  Extracting 16kHz mono audio…');

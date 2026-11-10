@@ -12,6 +12,7 @@
 import {execFileSync} from 'node:child_process';
 import {existsSync, mkdirSync} from 'node:fs';
 import path from 'node:path';
+import {findFootage} from './find-footage.mjs';
 
 const ROOT = process.cwd();
 const comp = process.argv[2] || 'FoundProfitsOverlay';
@@ -21,17 +22,11 @@ const isSample = comp === 'Sample';
 const scale = Number(process.env.SCALE || (isSample ? 1 : 2));
 const crf = Number(process.env.CRF || 17);
 
-// Auto-detect the footage file (mp4 / mov / m4v / webm) so the filename extension
-// doesn't matter — just name it footage.<ext> in public/.
-const candidates = isSample ? ['sample-footage.mp4'] : ['footage.mp4', 'footage.mov', 'footage.m4v', 'footage.webm', 'footage.MOV', 'footage.MP4'];
-let footageName = null;
-for (const c of candidates) {
-  if (existsSync(path.join(ROOT, 'public', c))) {
-    footageName = c;
-    break;
-  }
-}
+// Find the footage: any video dropped in public/ (prefers footage.<ext>), so the
+// filename and extension don't matter.
+const footageName = isSample ? 'sample-footage.mp4' : findFootage(path.join(ROOT, 'public'));
 const footage = footageName ? path.join(ROOT, 'public', footageName) : null;
+if (footageName) console.log('Using footage:', footageName);
 const outDir = path.join(ROOT, 'out');
 mkdirSync(outDir, {recursive: true});
 const resTag = `${1080 * scale}x${1920 * scale}`;
